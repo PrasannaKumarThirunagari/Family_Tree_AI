@@ -100,8 +100,8 @@ This project is licensed under the MIT License.
 
 ## 👤 Author
 
-- Developed by [Your Name]
-- [Your Contact or GitHub Profile]
+- Developed by Thirunagari PrasannaKumar
+- 9553355275
 
 ---
 
