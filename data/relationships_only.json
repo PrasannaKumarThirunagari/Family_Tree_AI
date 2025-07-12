@@ -1,0 +1,127 @@
+[
+    {
+        "type": "spouse",
+        "person1_id": "3",
+        "person2_id": "4"
+    },
+    {
+        "type": "parent",
+        "parent_id": "3",
+        "child_id": "5"
+    },
+    {
+        "type": "parent",
+        "parent_id": "4",
+        "child_id": "5"
+    },
+    {
+        "type": "spouse",
+        "person1_id": "5",
+        "person2_id": "6"
+    },
+    {
+        "type": "parent",
+        "parent_id": "3",
+        "child_id": "6"
+    },
+    {
+        "type": "parent",
+        "parent_id": "4",
+        "child_id": "6"
+    },
+    {
+        "type": "parent",
+        "parent_id": "3",
+        "child_id": "7"
+    },
+    {
+        "type": "spouse",
+        "person1_id": "7",
+        "person2_id": "8"
+    },
+    {
+        "type": "parent",
+        "parent_id": "3",
+        "child_id": "9"
+    },
+    {
+        "type": "parent",
+        "parent_id": "3",
+        "child_id": "12"
+    },
+    {
+        "type": "spouse",
+        "person1_id": "11",
+        "person2_id": "12"
+    },
+    {
+        "type": "spouse",
+        "person1_id": "9",
+        "person2_id": "10"
+    },
+    {
+        "type": "parent",
+        "parent_id": "5",
+        "child_id": "13"
+    },
+    {
+        "type": "parent",
+        "parent_id": "5",
+        "child_id": "14"
+    },
+    {
+        "type": "spouse",
+        "person1_id": "16",
+        "person2_id": "15"
+    },
+    {
+        "type": "parent",
+        "parent_id": "9",
+        "child_id": "16"
+    },
+    {
+        "type": "parent",
+        "parent_id": "7",
+        "child_id": "17"
+    },
+    {
+        "type": "parent",
+        "parent_id": "7",
+        "child_id": "18"
+    },
+    {
+        "type": "parent",
+        "parent_id": "12",
+        "child_id": "19"
+    },
+    {
+        "type": "spouse",
+        "person1_id": "17",
+        "person2_id": "20"
+    },
+    {
+        "type": "spouse",
+        "person1_id": "21",
+        "person2_id": "18"
+    },
+    {
+        "type": "spouse",
+        "person1_id": "13",
+        "person2_id": "23"
+    },
+    {
+        "type": "spouse",
+        "person1_id": "14",
+        "person2_id": "22"
+    },
+    {
+        "type": "parent",
+        "parent_id": "13",
+        "child_id": "24"
+    },
+    {
+        "type": "parent",
+        "parent_id": "13",
+        "child_id": "25"
+    }
+]
