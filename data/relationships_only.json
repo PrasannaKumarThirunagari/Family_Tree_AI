@@ -1,127 +1,33 @@
 [
-    {
-        "type": "spouse",
-        "person1_id": "3",
-        "person2_id": "4"
-    },
-    {
-        "type": "parent",
-        "parent_id": "3",
-        "child_id": "5"
-    },
-    {
-        "type": "parent",
-        "parent_id": "4",
-        "child_id": "5"
-    },
-    {
-        "type": "spouse",
-        "person1_id": "5",
-        "person2_id": "6"
-    },
-    {
-        "type": "parent",
-        "parent_id": "3",
-        "child_id": "6"
-    },
-    {
-        "type": "parent",
-        "parent_id": "4",
-        "child_id": "6"
-    },
-    {
-        "type": "parent",
-        "parent_id": "3",
-        "child_id": "7"
-    },
-    {
-        "type": "spouse",
-        "person1_id": "7",
-        "person2_id": "8"
-    },
-    {
-        "type": "parent",
-        "parent_id": "3",
-        "child_id": "9"
-    },
-    {
-        "type": "parent",
-        "parent_id": "3",
-        "child_id": "12"
-    },
-    {
-        "type": "spouse",
-        "person1_id": "11",
-        "person2_id": "12"
-    },
-    {
-        "type": "spouse",
-        "person1_id": "9",
-        "person2_id": "10"
-    },
-    {
-        "type": "parent",
-        "parent_id": "5",
-        "child_id": "13"
-    },
-    {
-        "type": "parent",
-        "parent_id": "5",
-        "child_id": "14"
-    },
-    {
-        "type": "spouse",
-        "person1_id": "16",
-        "person2_id": "15"
-    },
-    {
-        "type": "parent",
-        "parent_id": "9",
-        "child_id": "16"
-    },
-    {
-        "type": "parent",
-        "parent_id": "7",
-        "child_id": "17"
-    },
-    {
-        "type": "parent",
-        "parent_id": "7",
-        "child_id": "18"
-    },
-    {
-        "type": "parent",
-        "parent_id": "12",
-        "child_id": "19"
-    },
-    {
-        "type": "spouse",
-        "person1_id": "17",
-        "person2_id": "20"
-    },
-    {
-        "type": "spouse",
-        "person1_id": "21",
-        "person2_id": "18"
-    },
-    {
-        "type": "spouse",
-        "person1_id": "13",
-        "person2_id": "23"
-    },
-    {
-        "type": "spouse",
-        "person1_id": "14",
-        "person2_id": "22"
-    },
-    {
-        "type": "parent",
-        "parent_id": "13",
-        "child_id": "24"
-    },
-    {
-        "type": "parent",
-        "parent_id": "13",
-        "child_id": "25"
-    }
+    {"type": "spouse", "person1": "Srihari", "person2": "Susheela"},
+    {"type": "parent", "parent": "Srihari", "child": "Srinivas"},
+    {"type": "parent", "parent": "Susheela", "child": "Srinivas"},
+    {"type": "spouse", "person1": "Srinivas", "person2": "VijayaLaxmi"},
+    {"type": "parent", "parent": "Srihari", "child": "VijayaLaxmi"},
+    {"type": "parent", "parent": "Susheela", "child": "VijayaLaxmi"},
+    {"type": "parent", "parent": "Srihari", "child": "JayaPradha"},
+    {"type": "spouse", "person1": "JayaPradha", "person2": "Venu Gopala Swamy"},
+    {"type": "parent", "parent": "Srihari", "child": "Ramadevi"},
+    {"type": "parent", "parent": "Srihari", "child": "Padma"},
+    {"type": "spouse", "person1": "Vasu", "person2": "Padma"},
+    {"type": "spouse", "person1": "Ramadevi", "person2": "Narasimha Chary"},
+    {"type": "parent", "parent": "Srinivas", "child": "Prasanna"},
+    {"type": "parent", "parent": "Srinivas", "child": "Navya"},
+    {"type": "spouse", "person1": "Likitha", "person2": "Shekar"},
+    {"type": "parent", "parent": "Ramadevi", "child": "Likitha"},
+    {"type": "parent", "parent": "JayaPradha", "child": "Madhu"},
+    {"type": "parent", "parent": "JayaPradha", "child": "Chaitanya (Chitti)"},
+    {"type": "parent", "parent": "Padma", "child": "Premsai"},
+    {"type": "spouse", "person1": "Madhu", "person2": "Pranitha"},
+    {"type": "spouse", "person1": "Shastri", "person2": "Chaitanya (Chitti)"},
+    {"type": "spouse", "person1": "Prasanna", "person2": "Chandana"},
+    {"type": "spouse", "person1": "Navya", "person2": "Ravi Teja"},
+    {"type": "parent", "parent": "Prasanna", "child": "Sahasra Sri"},
+    {"type": "parent", "parent": "Prasanna", "child": "Manvi Sri"},
+    {"type": "parent", "parent": "Madhu", "child": "Avani"},
+    {"type": "parent", "parent": "Madhu", "child": "Janani"},
+    {"type": "parent", "parent": "Shekar", "child": "Shiva karthikeyan"},
+    {"type": "parent", "parent": "Shekar", "child": "Dakshayini"},
+    {"type": "parent", "parent": "Chaitanya (Chitti)", "child": "Abhichakra"},
+    {"type": "parent", "parent": "Chaitanya (Chitti)", "child": "Akshara"}
 ]

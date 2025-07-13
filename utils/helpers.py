@@ -57,7 +57,7 @@ def get_dropdowns():
 
 def build_graph():
     df, relationships = load_people()
-    people = {row['id']: row for _, row in df.iterrows()}
+    people = {row['firstname']: row for _, row in df.iterrows()}
     G = nx.DiGraph()
 
     # Group spouses into couple nodes
@@ -65,11 +65,11 @@ def build_graph():
     spouse_to_node = {}
     for rel in relationships:
         if rel['type'] == 'spouse':
-            pair = tuple(sorted([rel['person1_id'], rel['person2_id']]))
+            pair = tuple(sorted([rel['person1'], rel['person2']]))
             spouse_pairs.add(pair)
     # Add spouse nodes
     for pair in spouse_pairs:
-        p1, p2 = people[pair[0]], people[pair[1]]
+        p1, p2 = people.get(pair[0], {}), people.get(pair[1], {})
         node_id = f"{pair[0]}_{pair[1]}"
         marriage_year = p1.get('marriage_year') or p2.get('marriage_year') or ""
         label = f"""
@@ -85,21 +85,21 @@ def build_graph():
         spouse_to_node[pair[0]] = node_id
         spouse_to_node[pair[1]] = node_id
     # Add single (non-spouse) people as nodes
-    for pid, p in people.items():
-        if pid not in spouse_to_node:
+    for name, p in people.items():
+        if name not in spouse_to_node:
             label = f"""
             <div style='white-space:normal;text-align:center;'>
                 <b>{p.get('firstname','')} {p.get('surname','')}</b><br>
                 {p.get('birth_year','')} - {p.get('death_year','')}
             </div>
             """
-            G.add_node(pid, label=label, **p, shape="box")
+            G.add_node(name, label=label, **p, shape="box")
     # Add parent-child edges: from spouse node (if exists) or person to child/couple
     for rel in relationships:
         if rel['type'] == 'parent':
-            parent_id = rel['parent_id']
-            child_id = rel['child_id']
-            from_node = spouse_to_node.get(parent_id, parent_id)
-            to_node = spouse_to_node.get(child_id, child_id)
+            parent = rel['parent']
+            child = rel['child']
+            from_node = spouse_to_node.get(parent, parent)
+            to_node = spouse_to_node.get(child, child)
             G.add_edge(from_node, to_node, relation='parent')
     return G

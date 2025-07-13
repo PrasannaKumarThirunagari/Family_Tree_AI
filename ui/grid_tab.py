@@ -35,27 +35,23 @@ def show_grid_tab():
 
     # Add spouse relationship
     st.subheader("💍 Add Spouse Relationship")
-    people_options = df["id"].astype(str) + ": " + df["firstname"]
+    people_options = df["firstname"].tolist()
     person1 = st.selectbox("Person 1", people_options, key="spouse1")
     person2 = st.selectbox("Person 2", people_options, key="spouse2")
     if st.button("Link as Spouses"):
-        id1 = person1.split(":")[0]
-        id2 = person2.split(":")[0]
-        if id1 != id2 and not any(r for r in relationships if r["type"]=="spouse" and set([r["person1_id"], r["person2_id"]])==set([id1, id2])):
-            relationships.append({"type": "spouse", "person1_id": id1, "person2_id": id2})
+        if person1 != person2 and not any(r for r in relationships if r["type"]=="spouse" and set([r["person1"], r["person2"]])==set([person1, person2])):
+            relationships.append({"type": "spouse", "person1": person1, "person2": person2})
             st.session_state['relationships'] = relationships
             st.success(f"Linked {person1} and {person2} as spouses.")
             st.rerun()
 
     # Add parent-child relationship
-    st.subheader("👨‍👩‍� Add Parent-Child Relationship")
+    st.subheader("👨‍👩‍👧 Add Parent-Child Relationship")
     parent = st.selectbox("Parent", people_options, key="parent")
     child = st.selectbox("Child", people_options, key="child")
     if st.button("Link as Parent-Child"):
-        parent_id = parent.split(":")[0]
-        child_id = child.split(":")[0]
-        if parent_id != child_id and not any(r for r in relationships if r["type"]=="parent" and r["parent_id"]==parent_id and r["child_id"]==child_id):
-            relationships.append({"type": "parent", "parent_id": parent_id, "child_id": child_id})
+        if parent != child and not any(r for r in relationships if r["type"]=="parent" and r["parent"]==parent and r["child"]==child):
+            relationships.append({"type": "parent", "parent": parent, "child": child})
             st.session_state['relationships'] = relationships
             st.success(f"Linked {parent} as parent of {child}.")
             st.rerun()
@@ -63,19 +59,18 @@ def show_grid_tab():
     # Show relationships table with names instead of IDs
     st.subheader("🔗 Relationships")
     rel_display = []
-    people_dict = {row['id']: row['firstname'] for _, row in df.iterrows()}
     for r in relationships:
         if r['type'] == 'spouse':
             rel_display.append({
                 'type': 'spouse',
-                'person1': people_dict.get(r['person1_id'], r['person1_id']),
-                'person2': people_dict.get(r['person2_id'], r['person2_id'])
+                'person1': r['person1'],
+                'person2': r['person2']
             })
         elif r['type'] == 'parent':
             rel_display.append({
                 'type': 'parent',
-                'parent': people_dict.get(r['parent_id'], r['parent_id']),
-                'child': people_dict.get(r['child_id'], r['child_id'])
+                'parent': r['parent'],
+                'child': r['child']
             })
     st.dataframe(pd.DataFrame(rel_display))
 

@@ -32,7 +32,7 @@ family_tree_ai/
 │
 ├── main.py                  # Streamlit app entry point
 ├── requirements.txt         # Python dependencies
-├── tree.html                # Generated family tree visualization
+├── familytree.html                # Generated family tree visualization
 │
 ├── data/
 │   ├── people_only.json         # All person records

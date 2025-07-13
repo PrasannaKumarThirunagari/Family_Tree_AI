@@ -32,5 +32,5 @@ def query_family_question(query_text):
         + f"\n\nQuestion: {query_text}\nAnswer:"
     )
 
-    response = os.popen(f'ollama run llama3 "{prompt}"').read()
+    response = os.popen(f'ollama run llama2 "{prompt}"').read()
     return response
